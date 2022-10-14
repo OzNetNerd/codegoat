@@ -72,7 +72,7 @@ Resources:
         - Key: Name
           Value: !Sub "${AWS::AccountId}-${CompanyName}-${Environment}-data"
 
-  DataBucket2:
+  DataBucket3:
     Type: AWS::S3::Bucket
     DeletionPolicy: Delete
     Properties:
