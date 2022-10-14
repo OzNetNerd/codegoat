@@ -72,6 +72,17 @@ Resources:
         - Key: Name
           Value: !Sub "${AWS::AccountId}-${CompanyName}-${Environment}-data"
 
+  DataBucket2:
+    Type: AWS::S3::Bucket
+    DeletionPolicy: Delete
+    Properties:
+      BucketName: !Sub "${AWS::AccountId}-${CompanyName}-${Environment}-data"
+      AccessControl: PublicRead
+      Tags:
+        - Key: Name
+          Value: !Sub "${AWS::AccountId}-${CompanyName}-${Environment}-data"
+
+
 Outputs:
   EC2PublicDNS:
     Description: Web Host Public DNS Name
