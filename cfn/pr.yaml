@@ -71,6 +71,9 @@ Resources:
       Tags:
         - Key: Name
           Value: !Sub "${AWS::AccountId}-${CompanyName}-${Environment}-data"
+      PublicAccessBlockConfiguration:
+        BlockPublicPolicy: True
+        IgnorePublicAcls: True
 
   DataBucket3:
     Type: AWS::S3::Bucket
